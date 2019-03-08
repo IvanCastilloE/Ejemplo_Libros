@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Libruquis"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="480.489" Width="842.684">
     <Grid>
-        
+        <DataGrid x:Name="GridLibros" HorizontalAlignment="Left" Height="369" Margin="10,70,0,0" VerticalAlignment="Top" Width="815"/>
+        <Menu x:Name="Menu" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="835">
+            <MenuItem x:Name="MenuArchivo" Header="Archivo" Height="28" Width="85" Click="MenuItem_Click" FontFamily="Segoe UI Black" FontSize="16">
+                <MenuItem x:Name="NuevoItem" Header="Nuevo" HorizontalAlignment="Left" Height="28" Width="146" FontFamily="Segoe UI Emoji"/>
+                <MenuItem x:Name="SalirItem" Header="Salir" HorizontalAlignment="Left" Height="35" Width="150" FontFamily="Segoe UI Emoji" Margin="0,0,-2,0"/>
+            </MenuItem>
+        </Menu>
+
+
+
     </Grid>
 </Window>

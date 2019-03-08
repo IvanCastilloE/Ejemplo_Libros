@@ -9,37 +9,45 @@ namespace Libruquis
 {
     class Libro: INotifyPropertyChanged
     {
-        private string titulo;
-        public string Titulo
+
+        private String titulo;
+        public String Titulo
         {
             get { return titulo;  }
             set
             {
-                this.titulo = value;
+                titulo = value;
                 this.PropertyChanged(this, new PropertyChangedEventArgs("Titulo"));
             }
         }
-        private string autor;
-        public string Autor
+        private String autor;
+        public String Autor
         {
             get { return autor; }
             set
             {
-                this.autor = value;
+                autor = value;
                 this.PropertyChanged(this, new PropertyChangedEventArgs("Autor"));
             }
         }
-        private string fechaEntrada;
-        public string FechaEntrada
+        private DateTime fechaEntrada;
+        public DateTime FechaEntrada
         {
             get { return fechaEntrada; }
             set
             {
-                this.fechaEntrada = value;
+                fechaEntrada = value;
                 this.PropertyChanged(this, new PropertyChangedEventArgs("FechaEntrada"));
             }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public Libro(string titulo, string autor, DateTime fechaEntrada)
+        {
+            Titulo = titulo;
+            Autor = autor;
+            FechaEntrada = fechaEntrada;
+        }
     }
 }
