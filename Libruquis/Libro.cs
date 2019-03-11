@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Libruquis
 {
-    class Libro: INotifyPropertyChanged
+    public class Libro: INotifyPropertyChanged
     {
 
         private String titulo;

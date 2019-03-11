@@ -70,6 +70,7 @@
       <DependentUpon>DIalogoLibro.xaml</DependentUpon>
     </Compile>
     <Compile Include="Libro.cs" />
+    <Compile Include="LogicaNegocio.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

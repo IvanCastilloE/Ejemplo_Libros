@@ -29,5 +29,17 @@ namespace Libruquis
         {
 
         }
+
+        private void NuevoItem_Click(object sender, RoutedEventArgs e)
+        {
+            DIalogoLibro dialogoLibro = new DIalogoLibro(); //Crear instancia de elementos
+            dialogoLibro.Show();
+        }
+
+        private void SalirItem_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            this.Close();
+        }
     }
 }

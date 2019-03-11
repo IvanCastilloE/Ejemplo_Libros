@@ -28,5 +28,10 @@ namespace Libruquis
         {
 
         }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
