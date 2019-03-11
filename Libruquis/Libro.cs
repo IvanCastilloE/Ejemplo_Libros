@@ -45,9 +45,9 @@ namespace Libruquis
 
         public Libro(string titulo, string autor, DateTime fechaEntrada)
         {
-            Titulo = titulo;
-            Autor = autor;
-            FechaEntrada = fechaEntrada;
+            this.titulo = titulo;
+            this.autor = autor;
+            this.fechaEntrada = fechaEntrada;
         }
     }
 }

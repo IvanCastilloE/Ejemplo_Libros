@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,13 @@ namespace Libruquis
     /// </summary>
     public partial class MainWindow : Window
     {
+        private LogicaNegocio logicaNegocio;
         public MainWindow()
         {
             InitializeComponent();
+            logicaNegocio = new LogicaNegocio();
+            this.DataContext = this;
+            GridLibros.DataContext = logicaNegocio;
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
