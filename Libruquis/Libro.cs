@@ -43,6 +43,11 @@ namespace Libruquis
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public Libro()//Crear un constructor vacio que modifiqué la fecha
+        {
+            this.fechaEntrada = DateTime.Now;
+        }
+
         public Libro(string titulo, string autor, DateTime fechaEntrada)
         {
             this.titulo = titulo;

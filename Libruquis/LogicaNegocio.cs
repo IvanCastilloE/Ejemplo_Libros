@@ -9,7 +9,7 @@ namespace Libruquis
 {
     public partial class LogicaNegocio
     {
-         public ObservableCollection<Libro> ListaLibros { get; set; }
+        public ObservableCollection<Libro> ListaLibros { get; set; }
 
         public LogicaNegocio()
         {

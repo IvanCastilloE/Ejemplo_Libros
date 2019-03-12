@@ -13,8 +13,8 @@
         <TextBox HorizontalAlignment="Left" Text="{Binding Path=Titulo}" Height="23" Margin="180,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Segoe UI Emoji" FontSize="14"/>
         <TextBox HorizontalAlignment="Left" Text="{Binding Path=Autor}" Height="23" Margin="180,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Segoe UI Emoji" FontSize="14"/>
         <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding Path=FechaEntrada}" Margin="180,211,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnAceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="71,313,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="206,313,0,0" VerticalAlignment="Top" Width="75" Click="btnCancelar_Click"/>
+        <Button x:Name="btnNombre" Content="Aceptar" HorizontalAlignment="Left" Margin="70,313,0,0" VerticalAlignment="Top" Width="75" Click="btnNombre_Click"/>
 
     </Grid>
 </Window>

@@ -37,7 +37,7 @@ namespace Libruquis
 
         private void NuevoItem_Click(object sender, RoutedEventArgs e)
         {
-            DIalogoLibro dialogoLibro = new DIalogoLibro(); //Crear instancia de elementos
+            DIalogoLibro dialogoLibro = new DIalogoLibro(logicaNegocio); //Crear instancia de elementos
             dialogoLibro.Show();
         }
 
