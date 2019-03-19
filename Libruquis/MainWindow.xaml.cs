@@ -46,5 +46,15 @@ namespace Libruquis
             MainWindow mainWindow = new MainWindow();
             this.Close();
         }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+            if(GridLibros.SelectedIndex !=-1)
+            {
+                Libro libro = (Libro)GridLibros.SelectedItem;
+                DIalogoLibro dialogoLibro = new DIalogoLibro(logicaNegocio, (Libro)libro.Clone(), GridLibros.SelectedIndex);
+                dialogoLibro.Show();
+            }
+        }
     }
 }

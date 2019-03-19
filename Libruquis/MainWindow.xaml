@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Libruquis"
         mc:Ignorable="d"
-        Title="MainWindow" Height="480.489" Width="842.684">
+        Title="MainWindow" Height="511.74" Width="842.684">
     <Grid>
         <DataGrid x:Name="GridLibros" HorizontalAlignment="Left" ItemsSource="{Binding Path=ListaLibros}" Height="369" Margin="10,70,0,0" VerticalAlignment="Top" Width="815"/>
         <Menu x:Name="Menu" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="835">
@@ -14,6 +14,7 @@
                 <MenuItem x:Name="SalirItem" Header="Salir" HorizontalAlignment="Left" Height="35" Width="150" FontFamily="Segoe UI Emoji" Margin="0,0,-2,0" Click="SalirItem_Click"/>
             </MenuItem>
         </Menu>
+        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="723,444,0,0" VerticalAlignment="Top" Width="102" Height="27" Click="btnModificar_Click"/>
 
 
 

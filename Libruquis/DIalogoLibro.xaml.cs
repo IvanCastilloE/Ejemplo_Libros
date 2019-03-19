@@ -21,6 +21,8 @@ namespace Libruquis
     {
         private LogicaNegocio logicaNegocio; //Acceso privado a la variable logicaNegocio de la clase logica
         public Libro libro; //Variable publica de tipo Libro para acceder a la clase libro
+        private int posicion;
+        private Boolean modificar;
 
         public DIalogoLibro(LogicaNegocio logicaNegocio) //Pasar como parametro de la funcion logicaNegocio
         {
@@ -28,8 +30,17 @@ namespace Libruquis
             this.logicaNegocio = logicaNegocio; //Creo la instancia de la clase
             libro = new Libro(); // Crear un objeto de tipo libro
             this.DataContext = libro; //Defino el contexto de los datos - de donde vienen las propiedades
+            modificar = false;
         }
-
+        public DIalogoLibro(LogicaNegocio logicaNegocio, Libro libroModificar, int posicion) //
+        {
+            InitializeComponent();
+            this.logicaNegocio = logicaNegocio; 
+            this.libro = libroModificar;
+            this.posicion = posicion;
+            this.DataContext = libro;
+            modificar = true;
+        }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
@@ -38,9 +49,11 @@ namespace Libruquis
 
         private void btnNombre_Click(object sender, RoutedEventArgs e)
         {
-            logicaNegocio.agregarLibro(libro);
-            libro = new Libro();
-            this.DataContext = libro;
+            if (modificar)
+                logicaNegocio.ModificarLibro(libro, posicion);
+            else
+                logicaNegocio.agregarLibro(libro);
+            this.Close();
         }
     }
 }

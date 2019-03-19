@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Libruquis
 {
-    public class Libro: INotifyPropertyChanged
+    public class Libro: INotifyPropertyChanged, ICloneable
     {
 
         private String titulo;
@@ -53,6 +53,11 @@ namespace Libruquis
             this.titulo = titulo;
             this.autor = autor;
             this.fechaEntrada = fechaEntrada;
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
         }
     }
 }
